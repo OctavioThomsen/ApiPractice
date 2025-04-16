@@ -2,7 +2,7 @@
 Este proyecto está desarrollado en C# e incluye endpoints HTTP simulados, así como consultas SQL que utilizan procedimientos almacenados, vistas, funciones y CTEs para resolver distintas necesidades de negocio.
 
 ## Endpoints HTTP (C#)
-🟩 GET
+GET
 1. Obtener todos los clientes activos.
 2. Obtener los clientes activados en los últimos 90 días.
 3. Obtener todas las facturas de un cliente específico (por ID).
