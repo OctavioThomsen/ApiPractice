@@ -1,0 +1,70 @@
+C#.
+
+GET:
+
+1) Obtener todos los clientes activos.
+
+2) Obtener los clientes activados en los últimos 90 días.
+
+3) Obtener todas las facturas de un cliente específico (por ID).
+
+4) Obtener todos los clientes con facturas impagas.
+
+5) Calcular el monto total facturado para un cliente específico.
+
+6) Obtener clientes sin facturas
+
+POST:
+
+1) Crear un nuevo cliente
+
+2) Crear una nueva factura
+
+PUT:
+
+1) Actualizar un cliente existente
+
+2) Marcar una factura como pagada
+
+DELETE:
+
+1) Eliminar un cliente por ID
+
+2) Eliminar todas las facturas de un cliente específico
+
+SQL.
+
+1) Clientes y facturación total - Stored Procedure
+Obtener el listado de clientes activos, mostrando:
+
+Nombre, CUIT, Provincia, Total facturado, Cantidad de facturas.
+
+Solo incluir aquellos que tienen al menos una factura.
+
+2) Facturas impagas por provincia - View
+Mostrar, para cada provincia, el total acumulado de facturas impagas y la cantidad.
+
+Ordenar de mayor a menor total impago.
+
+3) Última factura por cliente - Inline TVF
+Mostrar para cada cliente:
+
+Su Id, Nombre y la fecha de su última factura (si tiene).
+
+4) Clientes sin facturas - View
+Listar todos los clientes que no tienen ninguna factura asociada.
+
+5) Clientes con promedio de facturación alto - Scalar Function + SP
+Obtener los nombres de los clientes cuyo promedio de facturación supera los $8000.
+
+6) Subconsulta tipo “factura más cara” - SP con TOP 1
+Mostrar la información de la factura con el monto más alto, incluyendo:
+
+Nombre del cliente, Fecha, Monto, Provincia.
+
+7) CTE + Ranking - CTE dentro de SP
+Mostrar las 3 facturas más altas por cliente, con:
+
+Id del cliente, Monto, Fecha, y un Ranking por cliente.
+
+(Usá CTE + ROW_NUMBER()).
